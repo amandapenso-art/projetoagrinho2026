@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroDose Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>AgroDose Consciente</h2>
+        <p class="subtitle">Evitando o desperdício e protegendo o solo</p>
+
+        <div class="input-group">
+            <label for="area">Área da Aplicação (Hectares):</label>
+            <input type="number" id="area" placeholder="Ex: 50" min="0" step="any">
+        </div>
+
+        <div class="input-group">
+            <label for="dose">Dose Recomendada:</label>
+            <input type="number" id="dose" placeholder="Ex: 1.5" min="0" step="any">
+        </div>
+
+        <div class="input-group">
+            <label for="unidade-dose">Unidade da Dose:</label>
+            <select id="unidade-dose">
+                <option value="L/ha">Litros por Hectare (L/ha)</option>
+                <option value="kg/ha">Quilos por Hectare (kg/ha)</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="calda">Volume de Calda (L/ha):</label>
+            <input type="number" id="calda" placeholder="Ex: 150" min="0" step="any">
+        </div>
+
+        <button onclick="calcularDosagem()">Calcular Volume Necessário</button>
+
+        <div id="resultado" class="result-box">
+            <strong>Produto Total Requerido:</strong> <span id="res-produto">0</span><br>
+            <strong>Água Total Necessária:</strong> <span id="res-calda">0</span> Litros
+        </div>
+
+        <div class="eco-note">
+            🌾 <strong>Dica Verde:</strong> Evite aplicar com ventos acima de 10 km/h para conter a deriva e evitar contaminações externas.
+        </div>
+
+        <div class="eco-instructions">
+            <h3>Descarte Correto de Embalagens (Lei 9.974/88)</h3>
+            <ol>
+                <li><strong>Tríplice Lavagem:</strong> Enxágue 3 vezes a embalagem vazia, adicionando água limpa até 1/4 do volume, agite por 30 segundos e despeje a água de enxágue diretamente no tanque do pulverizador.</li>
+                <li><strong>Inutilize:</strong> Perfure o fundo da embalagem limpa para impossibilitar o seu reaproveitamento. Guarde as tampas separadamente.</li>
+                <li><strong>Armazene:</strong> Mantenha temporariamente as embalagens preparadas em local coberto, seguro, ventilado e com piso impermeabilizado na fazenda.</li>
+                <li><strong>Devolução:</strong> Entregue as embalagens em um posto ou central de recebimento autorizado do Sistema Campo Limpo (inpEV) no prazo máximo de até 1 ano da compra.</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Tabela de Acompanhamento e Manejo</h2>
+        <p class="subtitle">Orientações técnicas por tipo de cultura e defensivo</p>
+        
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Planta (Cultura)</th>
+                        <th>Tipo de Defensivo</th>
+                        <th>Descrição / Alvo Biológico</th>
+                        <th>Dosagem Padrão</th>
+                        <th>Horário Ideal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Soja</strong></td>
+                        <td>Fungicida (Sistêmico)</td>
+                        <td>Controle da Ferrugem Asiática. Atua penetrando na planta para protegê-la de dentro para fora.</td>
+                        <td>0,5 a 0,7 L/ha</td>
+                        <td><span class="badge-hora">Início da manhã (6h às 9h)</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Milho</strong></td>
+                        <td>Inseticida (Contato/Ingestão)</td>
+                        <td>Combate à Lagarta-do-cartucho. Age diretamente sobre a praga presente no momento ou ao ser ingerido com a folha.</td>
+                        <td>100 a 150 mL/ha</td>
+                        <td><span class="badge-hora">Fim da tarde (16h às 19h)</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Trigo / Cereais</strong></td>
+                        <td>Herbicida (Pós-emergente)</td>
+                        <td>Controle de plantas daninhas de folhas largas que competem por nutrientes e luz solar com a cultura principal.</td>
+                        <td>1,5 a 2,0 L/ha</td>
+                        <td><span class="badge-hora">Período matutino (7h às 10h)</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Algodão</strong></td>
+                        <td>Regulador de Crescimento</td>
+                        <td>Equilibra o desenvolvimento vegetativo da planta, direcionando a energia para a produção das maçãs de algodão.</td>
+                        <td>0,3 a 0,5 L/ha</td>
+                        <td><span class="badge-hora">Dia todo (Evitar pico do sol)</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hortaliças / Tomate</strong></td>
+                        <td>Fungicida / Protetor</td>
+                        <td>Prevenção contra a Requeima e a Pinta Preta. Forma uma barreira protetora superficial sobre as folhas.</td>
+                        <td>1,5 a 2,0 kg/ha</td>
+                        <td><span class="badge-hora">Início da manhã (6h às 9h)</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-note">
+            * Nota: Siga sempre a receita agronômica oficial emitida por um profissional habilitado antes de realizar as aplicações no campo.
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
